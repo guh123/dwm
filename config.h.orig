@@ -8,7 +8,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 //static const char *fonts[]          = { "monospace:size=10" };
 //static const char dmenufont[]       = "monospace:size=10";
-static const char *fonts[]          = { "Souce Code Pro:size=12" };
+static const char *fonts[]          = { "Souce Code Pro:size=12" ,"Noto Color Emoji:pixelsize=14:antialias=true:autohint=true"};
 static const char dmenufont[]       = "Souce Code Pro:size=12";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -33,7 +33,8 @@ static const unsigned int alphas[][3]      = {
 
 /* tagging */
 //static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九" };
-static const char *tags[] = { "\uf120", "\uf7ae", "\uf121", "\uf04b", "\ue62e", "\uf251", "\ue727", "\uf537", "\uf684" };
+//static const char *tags[] = { "\uf120", "\uf7ae", "\uf121", "\uf04b", "\ue62e", "\uf251", "\ue727", "\uf537", "\uf684" };
+static const char *tags[] = { "🌞", "\uf7ae", "\uf121", "\uf04b", "\ue62e", "\uf251", "\ue727", "\uf537", "\uf684" };
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -76,6 +77,8 @@ static const char *upvol[]   = { "/home/dyear/scripts/vol-up.sh",  NULL };
 static const char *downvol[] = { "/home/dyear/scripts/vol-down.sh",  NULL };
 static const char *mutevol[] = { "/home/dyear/scripts/vol-toggle.sh",  NULL };
 static const char *burpcmd[]= {"/home/dyear/scripts/burp.sh",NULL};
+static const char *rangercmd[]= {"ranger",NULL};
+static const char *rofi[] = {"rofi","-combi-modi","drun,run","-show","modi"};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -84,6 +87,7 @@ static Key keys[] = {
 	{ 0,                   XF86XK_AudioMute,        spawn,          {.v = mutevol } },
 	{ 0,                   XF86XK_AudioRaiseVolume, spawn,          {.v = upvol   } },
 	{ MODKEY|ShiftMask,              XK_t,      spawn,          {.v = trayercmd }},
+	{ MODKEY,              XK_r,      spawn,          {.v = rofi }},
 	{ MODKEY,                       XK_p,      spawn,    	   {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },

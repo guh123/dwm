@@ -61,12 +61,15 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Gimp",	  NULL,			NULL,		0,				1,			 -1 },
 	{ "Firefox",  NULL,			NULL,		1 << 8,			0,			 -1 },
 	{ NULL,		  "spterm",		NULL,		SPTAG(0),		1,			 -1 },
 	{ NULL,		  "spfm",		NULL,		SPTAG(1),		1,			 -1 },
 	{ NULL,		  "keepassxc",	NULL,		SPTAG(2),		0,			 -1 },
+	{"chromium", NULL ,         NULL,        0,         1,             -1},
+	{"Burp Suite Professional v2.0beta - Temporary Project - licensed to surferxyz" , NULL, NULL,  0 , 1 , -1},
+	{"Burp Suite Pro 1.7.31 Loader&Keygen-By surferxyz", NULL,NULL,0,1,-1},
+	{"burp-StartBurp","sun-awt-X11-XFramePeer",NULL,0,1,-1},
+	{"enjoy-reversing-me-KeygenDialog","sun-awt-X11-XFramePeer",NULL,0,1,-1},
 };
 
 /* layout(s) */
